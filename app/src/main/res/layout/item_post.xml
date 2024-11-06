@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CustomShape"
+            tools:srcCompat = "@drawable/ic_launcher_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imageProfile"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/imageProfile"
+            tools:text = "Anas ahmed"/>
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imageProfile"
+            android:layout_marginStart="10dp"
+            android:textColor="#787272"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text = "10/8/2024"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/share"
+            app:backgroundTint="#736D6D"
+            app:layout_constraintBottom_toBottomOf="@+id/year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CustomShape2"
+            app:layout_constraintTop_toBottomOf="@id/imageProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src = "@drawable/ic_launcher_background"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
